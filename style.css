@@ -1,21 +1,23 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap');
+* {
+  box-sizing: border-box;
+}
 
 body {
   margin: 0;
-  font-family: "Montserrat";
+  font-family: "Lucida Grande";
 }
 
 a {
   text-decoration: none;
 }
 
-p{
-  font-family: "Open Sans";
+.clear {
+  clear: left;
 }
 
 .container {
-  width: 1170px;
+  max-width: 1170px;
+  width: 100%;
   padding: 0 15px;
   margin: 0 auto;
 }
@@ -41,6 +43,7 @@ p{
 }
 
 .btn-wrapper {
+  text-align: center;
   margin: 20px 0;
 }
 
@@ -67,7 +70,7 @@ p{
   display: inline-block;
   opacity: 0.8;
   border-radius: 4px;
-  font-family: "Open Sans";
+  text-align: center;
 }
 
 .btn:hover {
@@ -82,9 +85,9 @@ header {
   height: 65px;
   width: 100%;
   background-color: rgba(34, 49, 52, 0.9);
-  position:fixed;
-  top:0;
-  z-index:10;
+  position :fixed;
+  top: 0;
+  z-index: 10;
 }
 
 .logo {
@@ -98,12 +101,7 @@ header {
 
 .header-right {
   float: right;
-  background-color: rgba(255, 255, 255, 0.3);
-  transition: all 0.5s;
-}
-
-.header-right:hover {
-  background-color: rgba(255, 255, 255, 0.5);
+  margin-right: -25px;
 }
 
 .header-right a {
@@ -111,18 +109,36 @@ header {
   padding: 0 25px;
   color: white;
   display: block;
+  float: left;
+  transition: all 0.5s;
 }
 
+.header-right a:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Tambahkan CSS untuk menu-icon */
+.menu-icon {
+  display: none;
+  color: white;
+  float: right;
+  font-size: 25px;
+  padding: 21px 0;
+  
+}
+
+
 .lesson-wrapper {
-  height: 500px;
   padding-bottom: 80px;
+  padding-left: 5%;
+  padding-right: 5%;
   background-color: #f7f7f7;
   text-align: center;
 }
 
 .heading {
-  padding-top: 60px;
-  padding-bottom: 30px;
+  padding-top: 80px;
+  padding-bottom: 50px;
   color: #5f5d60;
 }
 
@@ -141,15 +157,15 @@ header {
 
 .lesson-icon p {
   position: absolute;
-  top: 90px;
+  top: 44%;
   width: 100%;
   color: white;
 }
 
-.txt-contents {
+.text-contents {
   width: 80%;
   display: inline-block;
-  margin-top: 20px;
+  margin-top: 15px;
   font-size: 15px;
   color: #b3aeb5;
 }
@@ -172,7 +188,7 @@ header {
 }
 
 .message:active {
-  position: absolute;
+  position: relative;
   top: 7px;
   box-shadow: none;
 }
@@ -188,4 +204,68 @@ footer p {
 
 footer {
   padding-top: 30px;
+  padding-bottom: 20px;
+}
+
+/* ----------------------------------------------------- */
+
+/* untuk rensponsive desain */
+
+/* Untuk Tablet */
+@media all and (max-width: 1000px) {
+  .lesson {
+    width: 50%;
+    margin-bottom: 50px;
+  }
+  
+  .top-wrapper h1 {
+    font-size: 32px;
+  }
+  
+  .heading h2 {
+    font-size: 20px;
+  }
+}
+
+/* Untuk Smartphone */
+@media all and (max-width: 670px) {
+  .lesson {
+    width: 100%;
+  }
+  
+  footer {
+    text-align: center;
+  }
+  
+  .btn {
+    width: 100%;
+  }
+  
+  .facebook {
+    margin-bottom: 10px;
+  }
+  
+  .top-wrapper {
+    text-align: left;
+  }
+  
+  /* Tambahkan CSS untuk header-right */
+  .header-right {
+    display:none;
+  }
+  
+  /* Tambahkan CSS untuk menu-icon */
+  .menu-icon{
+    display:block;
+  }
+  
+  .top-wrapper h1 {
+    font-size: 24px;
+    line-height: 36px;
+  }
+  
+  .top-wrapper p {
+    font-size: 14px;
+    line-height: 20px;
+  }
 }
