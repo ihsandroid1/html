@@ -213,7 +213,8 @@ footer {
 #shorthand{
   margin:0 auto;
   text-align: center;
-  font-size: 24px;
+  /*shorthand*/
+  font: normal italic small-caps 12px 10px Georgia, Times, 'Times New Roman', serif; 
 }
 
 #shorthand li{
