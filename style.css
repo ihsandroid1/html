@@ -209,6 +209,19 @@ footer {
 
 /* ----------------------------------------------------- */
 
+/* Belajar Shorthand */
+#shorthand{
+  margin:0 auto;
+  text-align: center;
+  font-size: 24px;
+}
+
+#shorthand li{
+  list-style-type: none;
+}
+
+/* ----------------------------------------------------- */
+
 /* untuk rensponsive desain */
 
 /* Untuk Tablet */
